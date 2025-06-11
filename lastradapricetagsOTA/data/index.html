@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bildschirm aktualisiren</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+      }
+      
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      
+      /* Стиль для формы */
+      .form {
+        background: #ffffff;
+        padding: 20px;
+        width: 100%;     
+		scale: 190%;
+        max-width: fit-content;  
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .form h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      .form form {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .form form input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .form form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .form form label {
+        margin-bottom: 10px;
+      }
+      
+      .form form input[type="checkbox"] {
+        margin-right: 5px;
+		
+		@media(width:800px){
+		
+		}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h1>Bildschirm</h1>
+        <form action="/update" method="GET">
+          <label>
+            text1:
+            <input type="text" name="text2" value="{text2}">
+          </label>
+          <label>
+            text2:
+            <input type="text" name="text3" value="{text3}">
+          </label>
+          <label>
+            Alte Preis:
+            <input type="text" name="text5" value="{text5}">
+          </label>
+          <label>
+            Preis:
+            <input type="text" name="text4" value="{text4}">
+          </label>
+          <label>
+            <input type="checkbox" name="redMode" value="on"> ROT
+          </label>
+          <input type="submit" value="Aktualisieren">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
